@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: This is my lambda layer for my Iss_Track_Phase_3_Infrastructure
+
+Resources:
+  IssTrackPhase3InfrastructureLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: Iss-Track-Phase-3-Infrastructure-dependencies
+      Description: Dependencies for Iss-Track-Phase-3-Infrastructure
+      ContentUri: dependencies/
+      CompatibleRuntimes:
+        - java8
+      RetentionPolicy: Retain
